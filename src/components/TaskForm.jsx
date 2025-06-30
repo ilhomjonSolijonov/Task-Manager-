@@ -16,8 +16,8 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
   }, [task]);
 
   const handleSubmit = () => {
-    if (!title.trim()) {
-      alert("Введите название задачи");
+    if (!title.trim() || !desc.trim()) {
+      alert("Введите название задачи или описание");
       return;
     }
 
